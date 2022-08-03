@@ -1,5 +1,4 @@
-﻿
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using DBSoft.FMPCloud.Interfaces;
 using DBSoft.FMPCloud.Model;
 using DBSoft.FMPCloud.StockTimeSeries.Model;
@@ -7,7 +6,7 @@ using Microsoft.Extensions.Logging;
 
 namespace DBSoft.FMPCloud.StockTimeSeries.Requesters
 {
-    public class TickerSearch : SingleRequesterWithRequestBase<TickerSearchRequest, TickerSearchResponse, List<Model.TickerSearch>>, ITickerSearch
+    public class TickerSearch : SingleRequesterWithRequestBase<TickerSearchRequest, List<Model.TickerSearch>>, ITickerSearch
     {
         public TickerSearch(IFmpCloudConfiguration configuration, ISubmitter submitter, ILogger<FmpCloudClient> logger)
             : base(configuration, submitter, logger)

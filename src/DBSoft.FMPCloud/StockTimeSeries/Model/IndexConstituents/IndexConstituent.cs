@@ -1,13 +1,7 @@
-﻿using DBSoft.FMPCloud.Model;
-using System;
-using System.Collections.Generic;
+﻿using System;
 
 namespace DBSoft.FMPCloud.StockTimeSeries.Model
 {
-    public class IndexConstituentsResponse : ResponseBase<List<IndexConstituent>>
-    {
-    }
-
     public class IndexConstituent
     {
         public string Symbol { get; set; }

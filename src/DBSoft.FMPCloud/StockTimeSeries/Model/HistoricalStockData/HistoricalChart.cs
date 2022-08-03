@@ -1,14 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using DBSoft.FMPCloud.Model;
-
 
 namespace DBSoft.FMPCloud.StockTimeSeries.Model
 {
-    public class HistoricalChartResponse : ResponseBase<List<HistoricalChart>>
-    {
-    }
-
     public class HistoricalChart
     {
         public DateTime Date { get; set; }

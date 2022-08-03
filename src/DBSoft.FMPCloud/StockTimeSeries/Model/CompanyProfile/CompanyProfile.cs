@@ -1,14 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
 using DBSoft.FMPCloud.Model;
 
 namespace DBSoft.FMPCloud.StockTimeSeries.Model
 {
-    public class CompanyProfileResponse : ResponseBase<List<CompanyProfile>>
-    {
-        
-    }
-
     public class CompanyProfile
     {
         public string Symbol { get; set; }

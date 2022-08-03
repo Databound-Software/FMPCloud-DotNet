@@ -6,9 +6,9 @@ using System.Collections.Generic;
 
 namespace DBSoft.FMPCloud
 {
-    public class RequesterBase<TResponse, TResponseData>
+    public class RequesterBase<TResponseData>
         : FmpBase
-        where TResponse : ResponseBase<TResponseData>, new()
+        
     {
         protected readonly Dictionary<string, string> Parameters;
         protected readonly string BaseUrl = StaticResources.BaseUrl;
@@ -36,11 +36,11 @@ namespace DBSoft.FMPCloud
             return JsonConvert.DeserializeObject<T>(content, Configuration.SerializerSettings);
         }
 
-        protected virtual TResponse GetStandardResponse(SubmitResponse response)
+        protected virtual ResponseBase<TResponseData> GetStandardResponse(SubmitResponse response)
         {
             var errorResponse = CheckForError(response);
 
-            return new TResponse
+            return new ResponseBase<TResponseData>
             {
                 Status = errorResponse == null ? Status.Success : Status.Error,
                 ErrorMessage = errorResponse == null ? string.Empty : errorResponse.ErrorMessage,

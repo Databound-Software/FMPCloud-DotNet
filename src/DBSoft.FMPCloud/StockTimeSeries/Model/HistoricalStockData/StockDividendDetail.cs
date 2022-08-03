@@ -2,10 +2,6 @@
 
 namespace DBSoft.FMPCloud.StockTimeSeries.Model
 {
-    public class StockDividendResponse : DailyResponseBase<DailyHeaderBase<StockDividendDetail>>
-    {
-    }
-
     public class StockDividendDetail
     {
         public DateTime Date { get; set; }

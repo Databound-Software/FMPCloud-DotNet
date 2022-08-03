@@ -8,16 +8,15 @@ using System.Threading.Tasks;
 
 namespace DBSoft.FMPCloud
 {
-    public class RequesterWithRequestBase<TRequest, TResponse, TResponseData>
-        : RequesterBase<TResponse, TResponseData>
-        where TResponse : ResponseBase<TResponseData>, new()
+    public class RequesterWithRequestBase<TRequest, TResponseData>
+        : RequesterBase<TResponseData>
     {
         internal RequesterWithRequestBase(IFmpCloudConfiguration configuration, ISubmitter submitter, ILogger<FmpCloudClient> logger)
             : base(configuration, submitter, logger)
         {
         }
 
-        public virtual async Task<TResponse> GetAsync(TRequest request = default)
+        public virtual async Task<ResponseBase<TResponseData>> GetAsync(TRequest request = default)
         {
             using var scope = Logger.BeginRequestScope();
             ValidateRequest(request);
@@ -36,7 +35,7 @@ namespace DBSoft.FMPCloud
             return string.Empty;
         }
 
-        protected virtual async Task<TResponse> DoSend(string extraPath = default, Dictionary<string, string> parameters = null)
+        protected virtual async Task<ResponseBase<TResponseData>> DoSend(string extraPath = default, Dictionary<string, string> parameters = null)
         {
             return GetStandardResponse(await Submitter.SubmitAsync($"{Url}{extraPath}", parameters ?? Parameters));
         }

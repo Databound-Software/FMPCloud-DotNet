@@ -2,10 +2,6 @@
 
 namespace DBSoft.FMPCloud.StockTimeSeries.Model
 {
-    public class DailyChangeAndVolumeResponse : DailyResponseBase<DailyHeaderBase<DailyChangeAndVolumeDetail>>
-    {
-    }
-
     public class DailyChangeAndVolumeDetail
     {
         public DateTime Date { get; set; }

@@ -1,14 +1,15 @@
-﻿using System.Threading.Tasks;
+﻿using DBSoft.FMPCloud.Model;
+using System.Threading.Tasks;
 
 namespace DBSoft.FMPCloud.Interfaces
 {
-    public interface IRequester<TRequest, TResponse>
+    public interface IRequester<TRequest, TResponseData>
     {
-        Task<TResponse> GetAsync(TRequest request = default);
+        Task<ResponseBase<TResponseData>> GetAsync(TRequest request = default);
     }
 
-    public interface IRequester<TResponse>
+    public interface IRequester<TResponseData>
     {
-        Task<TResponse> GetAsync();
+        Task<ResponseBase<TResponseData>> GetAsync();
     }
 }

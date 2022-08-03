@@ -1,18 +1,9 @@
-﻿using DBSoft.FMPCloud.Model;
-using System;
-using System.Collections.Generic;
-using System.Runtime.Serialization;
-
+﻿using System;
 
 namespace DBSoft.FMPCloud.StockTimeSeries.Model
 {
-    public class RealTimeQuoteResponse : ResponseBase<List<RealTimeQuote>>
-    {
-    }
-    [DataContract]
     public class RealTimeQuote
     {
-
         public string Symbol { get; set; }
         public string Name { get; set; }
         public decimal? ChangesPercentage { get; set; }

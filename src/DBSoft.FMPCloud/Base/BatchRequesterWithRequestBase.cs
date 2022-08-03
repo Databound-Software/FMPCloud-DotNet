@@ -6,8 +6,7 @@ using System.Linq;
 
 namespace DBSoft.FMPCloud
 {
-    public class BatchRequesterWithRequestBase<TRequest, TResponse, TResponseData> : RequesterWithRequestBase<TRequest, TResponse, TResponseData>
-        where TResponse : ResponseBase<TResponseData>, new()
+    public class BatchRequesterWithRequestBase<TRequest, TResponseData> : RequesterWithRequestBase<TRequest, TResponseData>
         where TRequest : StandardBatchRequestBase
     {
         internal BatchRequesterWithRequestBase(IFmpCloudConfiguration configuration, ISubmitter submitter, ILogger<FmpCloudClient> logger)

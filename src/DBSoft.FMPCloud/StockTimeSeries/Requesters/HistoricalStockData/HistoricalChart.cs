@@ -6,7 +6,7 @@ using Microsoft.Extensions.Logging;
 
 namespace DBSoft.FMPCloud.StockTimeSeries.Requesters
 {
-    public class HistoricalChart : SingleRequesterWithRequestBase<HistoricalChartRequest, HistoricalChartResponse, List<Model.HistoricalChart>>, IHistoricalChart
+    public class HistoricalChart : SingleRequesterWithRequestBase<HistoricalChartRequest, List<Model.HistoricalChart>>, IHistoricalChart
     {
         public HistoricalChart(IFmpCloudConfiguration configuration, ISubmitter submitter, ILogger<FmpCloudClient> logger)
             : base(configuration, submitter, logger)

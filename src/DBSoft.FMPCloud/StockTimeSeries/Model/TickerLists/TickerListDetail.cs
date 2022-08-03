@@ -1,12 +1,5 @@
-﻿using DBSoft.FMPCloud.Model;
-using System.Collections.Generic;
-
-namespace DBSoft.FMPCloud.StockTimeSeries.Model
+﻿namespace DBSoft.FMPCloud.StockTimeSeries.Model
 {
-    public class TickerListResponse : ResponseBase<List<TickerListDetail>>
-    {
-    }
-
     public class TickerListDetail
     {
         public string Symbol { get; set; }

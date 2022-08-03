@@ -3,7 +3,7 @@ using DBSoft.FMPCloud.StockTimeSeries.Model;
 
 namespace DBSoft.FMPCloud.StockTimeSeries
 {
-    public interface IDailyLastXDays : IRequester<DailyLastXDaysRequest, DailyChangeAndVolumeResponse>
+    public interface IDailyLastXDays : IRequester<DailyLastXDaysRequest, DailyHeaderBase<DailyChangeAndVolumeDetail>>
     {
     }
 }

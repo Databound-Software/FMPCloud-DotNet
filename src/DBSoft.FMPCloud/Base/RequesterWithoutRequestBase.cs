@@ -6,8 +6,7 @@ using System.Threading.Tasks;
 
 namespace DBSoft.FMPCloud
 {
-    public class RequesterWithoutRequestBase<TResponse, TResponseData> : RequesterBase<TResponse, TResponseData>
-        where TResponse : ResponseBase<TResponseData>, new()
+    public class RequesterWithoutRequestBase<TResponseData> : RequesterBase<TResponseData>
     {
 
         internal RequesterWithoutRequestBase(IFmpCloudConfiguration configuration, ISubmitter submitter, ILogger<FmpCloudClient> logger)
@@ -15,14 +14,14 @@ namespace DBSoft.FMPCloud
         {
         }
 
-        public virtual async Task<TResponse> GetAsync()
+        public virtual async Task<ResponseBase<TResponseData>> GetAsync()
         {
             using var scope = Logger.BeginRequestScope();
             return await DoSend();
 
         }
 
-        protected virtual async Task<TResponse> DoSend()
+        protected virtual async Task<ResponseBase<TResponseData>> DoSend()
         {
             return GetStandardResponse(await Submitter.SubmitAsync(Url, Parameters));
         }

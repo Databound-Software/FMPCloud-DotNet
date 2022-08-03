@@ -3,6 +3,7 @@ using DBSoft.FMPCloud.Model;
 using DBSoft.FMPCloud.StockTimeSeries.Model;
 using Microsoft.Extensions.Logging;
 using System.Threading.Tasks;
+using System.Collections.Generic;
 
 namespace DBSoft.FMPCloud.StockTimeSeries.Requesters
 {
@@ -13,7 +14,7 @@ namespace DBSoft.FMPCloud.StockTimeSeries.Requesters
         {
         }
 
-        public override Task<AvailableSecuritiesResponse> GetAsync(StandardRequestBase request = default)
+        public override Task<ResponseBase<List<AvailableSecurity>>> GetAsync(StandardRequestBase request = default)
         {
             return base.GetAsync(new StandardRequestBase { Symbol = "available-tsx" });
         }

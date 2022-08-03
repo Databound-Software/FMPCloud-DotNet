@@ -1,12 +1,5 @@
-﻿using System.Collections.Generic;
-using DBSoft.FMPCloud.Model;
-
-namespace DBSoft.FMPCloud.StockTimeSeries.Model
+﻿namespace DBSoft.FMPCloud.StockTimeSeries.Model
 {
-    public class AvailableSecuritiesResponse : ResponseBase<List<AvailableSecurity>>
-    {
-    }
-
     public class AvailableSecurity
     {
         public string Symbol { get; set; }

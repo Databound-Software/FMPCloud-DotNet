@@ -1,13 +1,7 @@
-﻿using DBSoft.FMPCloud.Model;
-using System;
-using System.Collections.Generic;
+﻿using System;
 
 namespace DBSoft.FMPCloud.StockTimeSeries.Model
 {
-    public class HistoricalSectorPerformanceResponse : ResponseBase<List<HistoricalSectorPerformanceDetail>>
-    {
-    }
-
     public class HistoricalSectorPerformanceDetail
     {
         public DateTime Date { get; set; }

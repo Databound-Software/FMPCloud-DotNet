@@ -1,14 +1,9 @@
-﻿using DBSoft.FMPCloud.Model;
-using Newtonsoft.Json;
-using System;
+﻿using System;
 using System.Collections.Generic;
+using Newtonsoft.Json;
 
 namespace DBSoft.FMPCloud.StockTimeSeries.Model
 {
-    public class TradingHoursResponse : ResponseBase<List<TradingHoursDetail>>
-    {
-    }
-
     public class TradingHoursDetail
     {
         public string StockExchangeName { get; set; }

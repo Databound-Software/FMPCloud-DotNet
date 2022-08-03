@@ -5,8 +5,7 @@ using System;
 
 namespace DBSoft.FMPCloud
 {
-    public class SingleRequesterWithRequestBase<TRequest, TResponse, TResponseData> : RequesterWithRequestBase<TRequest, TResponse, TResponseData>
-        where TResponse : ResponseBase<TResponseData>, new()
+    public class SingleRequesterWithRequestBase<TRequest, TResponseData> : RequesterWithRequestBase<TRequest, TResponseData>
         where TRequest : StandardRequestBase
     {
         internal SingleRequesterWithRequestBase(IFmpCloudConfiguration configuration, ISubmitter submitter, ILogger<FmpCloudClient> logger)

@@ -1,13 +1,11 @@
-﻿
-using DBSoft.FMPCloud.Interfaces;
+﻿using DBSoft.FMPCloud.Interfaces;
 using DBSoft.FMPCloud.StockTimeSeries.Model;
 using Microsoft.Extensions.Logging;
 using System.Collections.Generic;
 
-
 namespace DBSoft.FMPCloud.StockTimeSeries.Requesters
 {
-    public class DailyLastXDays : SingleRequesterWithRequestBase<DailyLastXDaysRequest, DailyChangeAndVolumeResponse, DailyHeaderBase<DailyChangeAndVolumeDetail>>, IDailyLastXDays
+    public class DailyLastXDays : SingleRequesterWithRequestBase<DailyLastXDaysRequest, DailyHeaderBase<DailyChangeAndVolumeDetail>>, IDailyLastXDays
     {
         public DailyLastXDays(IFmpCloudConfiguration configuration, ISubmitter submitter, ILogger<FmpCloudClient> logger)
             : base(configuration, submitter, logger)

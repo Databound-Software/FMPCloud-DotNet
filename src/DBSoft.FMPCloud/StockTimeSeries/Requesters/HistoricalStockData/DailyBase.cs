@@ -1,14 +1,11 @@
-﻿
+﻿using System.Collections.Generic;
 using DBSoft.FMPCloud.Interfaces;
-using DBSoft.FMPCloud.Model;
 using DBSoft.FMPCloud.StockTimeSeries.Model;
 using Microsoft.Extensions.Logging;
-using System.Collections.Generic;
 
 namespace DBSoft.FMPCloud.StockTimeSeries.Requesters
 {
-    public class DailyBase<TRequest, TResponse, TResponseData> : SingleRequesterWithRequestBase<TRequest, TResponse, TResponseData>
-        where TResponse : ResponseBase<TResponseData>, new()
+    public class DailyBase<TRequest, TResponseData> : SingleRequesterWithRequestBase<TRequest, TResponseData>
         where TRequest : PeriodOfTimeRequestBase
     {
         public DailyBase(IFmpCloudConfiguration configuration, ISubmitter submitter, ILogger<FmpCloudClient> logger)

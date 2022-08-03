@@ -1,13 +1,11 @@
-﻿
-using DBSoft.FMPCloud.Interfaces;
+﻿using DBSoft.FMPCloud.Interfaces;
 using DBSoft.FMPCloud.StockTimeSeries.Model;
 using Microsoft.Extensions.Logging;
 using System.Collections.Generic;
 
-
 namespace DBSoft.FMPCloud.StockTimeSeries.Requesters
 {
-    public class DailyChangeAndVolume : SingleRequesterWithRequestBase<DailyChangeAndVolumeRequest, DailyChangeAndVolumeResponse, DailyHeaderBase<DailyChangeAndVolumeDetail>>, IDailyChangeAndVolume
+    public class DailyChangeAndVolume : SingleRequesterWithRequestBase<DailyChangeAndVolumeRequest, DailyHeaderBase<DailyChangeAndVolumeDetail>>, IDailyChangeAndVolume
     {
         public DailyChangeAndVolume(IFmpCloudConfiguration configuration, ISubmitter submitter, ILogger<FmpCloudClient> logger)
             : base(configuration, submitter, logger)
