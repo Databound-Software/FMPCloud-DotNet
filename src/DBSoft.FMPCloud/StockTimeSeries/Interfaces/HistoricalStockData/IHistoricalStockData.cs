@@ -2,11 +2,11 @@
 {
     public interface IHistoricalStockData
     {
-        IHistoricalChart HistoricalChart { get; set; }
-        IDailyLine DailyLine { get; set; }
-        IDailyChangeAndVolume DailyChangeAndVolume { get; set; }
-        IDailyLastXDays DailyLastXDays { get; set; }
-        IStockDividend DailyStockDividend { get; set; }
-        IStockSplit DailyStockSplit { get; set; }
+        IHistoricalChart HistoricalChart { get; }
+        IDailyLine DailyLine { get; }
+        IDailyChangeAndVolume DailyChangeAndVolume { get; }
+        IDailyLastXDays DailyLastXDays { get; }
+        IStockDividend DailyStockDividend { get; }
+        IStockSplit DailyStockSplit { get; }
     }
 }

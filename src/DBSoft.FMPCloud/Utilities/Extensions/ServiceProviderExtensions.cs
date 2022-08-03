@@ -16,7 +16,7 @@ namespace DBSoft.FMPCloud.Utilities
             services.AddSingleton<IFmpCloudClient>(x =>
             {
                 return new FmpCloudClient(
-                    x.GetService<IOptions<FMPCloudConfiguration>>().Value,
+                    x.GetService<IOptions<FmpCloudConfiguration>>().Value,
                     x.GetService<ISubmitter>(),
                     x.GetService<ILogger<FmpCloudClient>>()
                     );

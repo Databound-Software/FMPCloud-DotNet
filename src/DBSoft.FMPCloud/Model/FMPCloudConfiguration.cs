@@ -4,12 +4,12 @@ using DBSoft.FMPCloud.Interfaces;
 
 namespace DBSoft.FMPCloud.Model
 {
-    public class FMPCloudConfiguration : IFmpCloudConfiguration
+    public class FmpCloudConfiguration : IFmpCloudConfiguration
     {
         public string ApiKey { get; set; }
         public JsonSerializerSettings SerializerSettings { get; set; }
 
-        public FMPCloudConfiguration()
+        public FmpCloudConfiguration()
         {
             SerializerSettings = new JsonSerializerSettings
             {

@@ -3,9 +3,9 @@ using Microsoft.Extensions.Logging;
 
 namespace DBSoft.FMPCloud
 {
-    public class ProxyBase : FmpBase
+    public class FacadeBase : FmpBase
     {
-        internal ProxyBase(IFmpCloudConfiguration configuration, ISubmitter submitter, ILogger<FmpCloudClient> logger)
+        internal FacadeBase(IFmpCloudConfiguration configuration, ISubmitter submitter, ILogger<FmpCloudClient> logger)
             : base(configuration, submitter, logger)
         {
         }

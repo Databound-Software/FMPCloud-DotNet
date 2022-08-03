@@ -2,11 +2,11 @@
 {
     public interface IIndexConstituents
     {
-        IConstituents SP500 { get; set; }
-        IHistoricalConstituents SP500Historical { get; set; }
-        IConstituents Nasdaq100 { get; set; }
-        IHistoricalConstituents Nasdaq100Historical { get; set; }
-        IConstituents DowJones { get; set; }
-        IHistoricalConstituents DowJonesHistorical { get; set; }
+        IConstituents SP500 { get; }
+        IHistoricalConstituents SP500Historical { get; }
+        IConstituents Nasdaq100 { get; }
+        IHistoricalConstituents Nasdaq100Historical { get; }
+        IConstituents DowJones { get; }
+        IHistoricalConstituents DowJonesHistorical { get; }
     }
 }

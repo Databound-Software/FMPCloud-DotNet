@@ -2,12 +2,12 @@
 {
     public interface IStockTimeSeries
     {
-        IRealTimeQuote RealTimeQuote { get; set; }
-        ITickerSearch TickerSearch { get; set; }
-        ICompanyProfile CompanyProfile { get; set; }
-        IKeyExecutives KeyExecutives { get; set; }
-        IHistoricalStockData HistoricalStockData { get; set; }
-        IIndexConstituents IndexConstituents { get; set; }
-        IStockMarketPerformances StockMarketPerformances { get; set; }
+        IRealTimeQuote RealTimeQuote { get; }
+        ITickerSearch TickerSearch { get; }
+        ICompanyProfile CompanyProfile { get; }
+        IKeyExecutives KeyExecutives { get; }
+        IHistoricalStockData HistoricalStockData { get; }
+        IIndexConstituents IndexConstituents { get; }
+        IStockMarketPerformances StockMarketPerformances { get; }
     }
 }

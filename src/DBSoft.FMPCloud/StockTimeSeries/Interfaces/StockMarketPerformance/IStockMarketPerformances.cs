@@ -2,11 +2,11 @@
 {
     public interface IStockMarketPerformances
     {
-        ITopActive TopActives { get; set; }
-        ITopLosers TopLosers { get; set; }
-        ITopGainers TopGainers { get; set; }
-        ISectorPerformance SectorPerformances { get; set; }
-        IHistoricalSectorPerformance HistoricalSectorPerformances { get; set; }
-        ITradingHours TradingHours { get; set; }
+        ITopActive TopActives { get; }
+        ITopLosers TopLosers { get; }
+        ITopGainers TopGainers { get; }
+        ISectorPerformance SectorPerformances { get; }
+        IHistoricalSectorPerformance HistoricalSectorPerformances { get; }
+        ITradingHours TradingHours { get; }
     }
 }

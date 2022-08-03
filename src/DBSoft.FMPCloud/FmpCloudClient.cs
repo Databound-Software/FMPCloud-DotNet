@@ -10,10 +10,10 @@ namespace DBSoft.FMPCloud
         public IStockTimeSeries StockTimeSeries { get; set; }
 
 
-        public FmpCloudClient(FMPCloudConfiguration configuration, ISubmitter submitter, ILogger<FmpCloudClient> logger)
+        public FmpCloudClient(FmpCloudConfiguration configuration, ISubmitter submitter, ILogger<FmpCloudClient> logger)
             : base(configuration, submitter, logger)
         {
-            StockTimeSeries = new StockTimeSeriesProxy(configuration, submitter, logger);
+            StockTimeSeries = new StockTimeSeriesFacade(configuration, submitter, logger);
         }
     }
 }
